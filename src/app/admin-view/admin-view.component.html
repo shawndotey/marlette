@@ -6,6 +6,6 @@
   Users:
 </h2>
 
-<li *ngFor="let user of users">
+<li *ngFor="let user of users | async as asyncUsers">
   {{user.firstName}} {{user.lastName}} 
 </li>

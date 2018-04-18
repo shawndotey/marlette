@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from './shared/user.service';
 import { User } from './shared/user.model';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-admin-view',
@@ -11,7 +12,7 @@ export class AdminViewComponent implements OnInit {
 
   constructor() { }
   userService: UserService;
-  users: User[];
+  users: Observable<User[]>;
   ngOnInit()
   {
     this.userService = new UserService();
@@ -20,12 +21,7 @@ export class AdminViewComponent implements OnInit {
   getUsers(): void
   {
 
-    this.userService.getUsers()
-      .subscribe(users =>
-      {
-
-        console.log("users", users);
-        this.users = users
-      });
+    this.users = this.userService.getUsers();
+     
   }
 }

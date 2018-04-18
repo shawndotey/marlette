@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 import { User} from './user.model';
-import { setTimeout } from 'timers';
 
 @Injectable()
 export class UserService {
