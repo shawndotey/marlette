@@ -1,17 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <img width="300" alt="Angular Logo" src="https://3afa9h29tza4q7aox24sdwgl-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/logo-marlette-hrz-long.png">
-  
+
   <h1>
     Welcome to {{ title }}
   </h1>
+  <h3>
+    This is a very basic Prof of concept for a angular 5 minimum viable product (MVP)
+  </h3>
 </div>
-<h2>Here  some links to help you start: </h2>
+<div style="padding-left:4px;padding-right:4px;">
+  <h2>Here are some views: </h2>
 
-<nav>
-  <a routerLink="/home" routerLinkActive="active">Home (here)</a>
-  <a routerLink="/admin" routerLinkActive="active">Admin</a>
-</nav>
-
+  <nav>
+    <a style="padding-left:2px;padding-right:2px;" routerLink="/home" routerLinkActive="active">Home</a>
+    <a style="padding-left:2px;padding-right:2px;"routerLink="/admin" routerLinkActive="active">Admin</a>
+  </nav>
+</div>
 
 <router-outlet></router-outlet>
